@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex">
+  <header class="w-[35%] bg-[url(../images/bg-main-desktop.png)] bg-center bg-cover h-screen">
+    <div class="container border border-black relative  h-full flex flex-col items-center justify-center">
+      <div class="card-front__wrapper flex flex-col p-6 absolute top-12 right-[-100px] rounded-lg  w-5/6 h-64 bg-[url(../images/bg-card-front.png)] bg-cover bg-center">
+        <div class="mb-20">
+          <img src="../images/card-logo.svg" alt="card-logo">
+        </div>
+        <h2 class="text-3xl text-white tracking-widest mb-6">0000 0000 0000 0000</h2>
+        <div class="flex justify-between">
+          <h4 class="font-normal text-white">Jane Appleseed</h4>
+          <h4 class="font-normal text-white">00/00</h4>
+        </div>
+      </div>
+      <div class="card-back__wrapper bg-[url(../images/bg-card-back.png)] bg-center bg-cover flex items-center justify-center absolute bottom-12 right-[-150px] rounded-lg w-5/6 h-64">
+        <label for="output"></label>
+        <output id="output" class="w-[92%] text-right text-white text-lg">000</output>
+      </div>
+    </div>
+  </header>
+  <section class="flex flex-col items-center w-[65%] justify-center">
+    <form class="w-3/5  p-7  flex flex-col space-y-5">
+      <div class="flex flex-col space-y-1">
+        <label for="name" class="text-[#130D2F] font-medium">Cardholder Name</label>
+        <input class="px-2 border rounded-lg w-[90%] h-[40px]" type="text" id="name" placeholder="e.g. Jane Appleseed">
+        <p class="text-xs text-[#FF0000] hidden">Can't be blank</p>
+      </div>
+      <div class="flex flex-col space-y-1">
+        <label for="card-number" class="text-[#130D2F] font-medium">Card Number</label>
+        <input class="px-2 border rounded-lg w-[90%] h-[40px]" type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="text-xs text-[#FF0000] hidden">Wrong format, numbers only</p>
+      </div>
+      <div class="flex  w-[90%]">
+        <div class="flex space-y-1 flex-col w-2/4">
+          <label for="date" class="text-[#130D2F] font-medium">EXP. DATE (MM/YY)</label>
+          <div class="flex space-x-2">
+            <input class="px-2 border rounded-lg w-2/6 h-[40px] appearance-none" type="number" name="month" id="month" placeholder="MM">
+            <input class="px-2 border rounded-lg w-2/6 h-[40px] appearance-none" type="number" name="year" id="year" placeholder="YY">
+          </div>
+          <p class="text-xs text-[#FF0000] hidden">Can't be blank</p>
+        </div>
+        <div class="flex flex-col space-y-1 w-2/4">
+          <label for="card-number" class="text-[#130D2F] font-medium">CVC</label>
+          <input class="px-2 rounded-lg border h-[40px]" type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+          <p class="text-xs text-[#FF0000] hidden">Can't be blank</p>
+        </div>
+      </div>
+      <button class="w-[90%] h-[40px] rounded-lg bg-[#130D2F] text-white" type="button">Confirm</button>
+    </form>  
+  </section>
+  <section class="flex flex-col items-center space-y-4 w-[65%] justify-center border hidden">
+    <img src="../images/icon-complete.svg" alt="">
+    <h3 class="uppercase text-2xl text-[#130D2F] font-medium">Thank You!</h3>
+    <p class="text-lg text-[#8F9AA1] font-normal">We've added your card details</p>
+    <button class="mt-2 h-10 w-[400px] border rounded-lg bg-[#130D2F] text-white" type="button">Continue</button>
+  </section>
+  
+  
+  <div class="attribution hidden">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
