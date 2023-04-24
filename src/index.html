@@ -36,17 +36,18 @@
       </div>
     </div>
   </header>
-  <section class="flex flex-col items-center w-[65%] justify-center">
+  <section class="form flex flex-col items-center w-[65%] justify-center">
     <form class="w-3/5  p-7  flex flex-col space-y-5">
       <div class="flex flex-col space-y-1">
         <label for="name" class="text-[#130D2F] font-medium">Cardholder Name</label>
         <input class="px-2 border rounded-lg w-[90%] h-[40px]" type="text" id="name" placeholder="e.g. Jane Appleseed">
-        <p class="text-xs text-[#FF0000] hidden">Can't be blank</p>
+        <p class="name-err text-xs text-[#FF0000] hidden">Can't be blank</p>
       </div>
       <div class="flex flex-col space-y-1">
         <label for="card-number" class="text-[#130D2F] font-medium">Card Number</label>
         <input class="px-2 border rounded-lg w-[90%] h-[40px]" type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
-        <p class="text-xs text-[#FF0000] hidden">Wrong format, numbers only</p>
+        <p class="card-num-err text-xs text-[#FF0000] hidden">Wrong format, numbers only</p>
+        <p class="card-num-err2 text-xs text-[#FF0000] hidden">Can't be blank</p>
       </div>
       <div class="flex  w-[90%]">
         <div class="flex space-y-1 flex-col w-2/4">
@@ -55,22 +56,23 @@
             <input class="px-2 border rounded-lg w-2/6 h-[40px] appearance-none" type="number" name="month" id="month" placeholder="MM">
             <input class="px-2 border rounded-lg w-2/6 h-[40px] appearance-none" type="number" name="year" id="year" placeholder="YY">
           </div>
-          <p class="text-xs text-[#FF0000] hidden">Can't be blank</p>
+          <p class="text-xs text-[#FF0000] mon-err hidden">Can't be blank</p>
+          <p class="text-xs text-[#FF0000] mon-err2 hidden">Invalid input</p>
         </div>
         <div class="flex flex-col space-y-1 w-2/4">
           <label for="card-number" class="text-[#130D2F] font-medium">CVC</label>
           <input class="px-2 rounded-lg border h-[40px]" type="number" name="cvc" id="cvc" placeholder="e.g. 123">
-          <p class="text-xs text-[#FF0000] hidden">Can't be blank</p>
+          <p class="text-xs text-[#FF0000] cvc-err hidden">Can't be blank</p>
         </div>
       </div>
-      <button class="w-[90%] h-[40px] rounded-lg bg-[#130D2F] text-white" type="button">Confirm</button>
+      <button class="confirm w-[90%] h-[40px] rounded-lg bg-[#130D2F] text-white" type="button">Confirm</button>
     </form>  
   </section>
-  <section class="flex flex-col items-center space-y-4 w-[65%] justify-center border hidden">
+  <section class="next flex flex-col items-center space-y-4 w-[65%] justify-center  hidden">
     <img src="../images/icon-complete.svg" alt="">
     <h3 class="uppercase text-2xl text-[#130D2F] font-medium">Thank You!</h3>
     <p class="text-lg text-[#8F9AA1] font-normal">We've added your card details</p>
-    <button class="mt-2 h-10 w-[400px] border rounded-lg bg-[#130D2F] text-white" type="button">Continue</button>
+    <button class="continue-btn mt-2 h-10 w-[400px] border rounded-lg bg-[#130D2F] text-white" type="button">Continue</button>
   </section>
   
   
